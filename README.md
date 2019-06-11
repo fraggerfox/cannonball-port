@@ -30,6 +30,7 @@ Credits
 
 * Cannonball is developed and maintained by Chris White and Arun Horne.
 * Thanks to `@ppaeps` for a machine to test the port development.
+* Thanks to `swills@` and `diizzy` for reviewing the port.
 
 License
 -------
