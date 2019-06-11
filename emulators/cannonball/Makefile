@@ -7,8 +7,10 @@ CATEGORIES=	emulators
 MAINTAINER=	santhosh.raju@gmail.com
 COMMENT=	Enhanced OutRun Engine
 
-LICENSE=	GPLv2
+LICENSE=	MAME-LICENSE
+LICENSE_NAME=	MAME license
 LICENSE_FILE=	${WRKSRC}/docs/license.txt
+LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
 LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs
 
