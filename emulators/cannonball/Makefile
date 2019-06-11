@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cannonball
-PORTVERSION=	0.3
-DISTVERSIONPREFIX=v
+DISTVERSION=	g20171201
 CATEGORIES=	emulators
 
 MAINTAINER=	santhosh.raju@gmail.com
