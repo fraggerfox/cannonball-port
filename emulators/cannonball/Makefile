@@ -1,8 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/emulators/cannonball/Makefile 506026 2019-07-06 18:55:17Z swills $
 
 PORTNAME=	cannonball
 DISTVERSION=	g20171201
-CATEGORIES=	emulators
+CATEGORIES=	emulators games
 
 MAINTAINER=	santhosh.raju@gmail.com
 COMMENT=	Enhanced OutRun Engine
