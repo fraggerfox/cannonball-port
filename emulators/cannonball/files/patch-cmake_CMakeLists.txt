@@ -1,16 +1,33 @@
-Remove the boost directory reference.
+Adds support for BSD based builds.
 
-Not required in ports, since boost libraries are directly installed
-in ${LOCALBASE}/include
+1. PREFIX path is configured via BSD_PREFIX_PATH for BSDs.
 
---- cmake/CMakeLists.txt.orig	2019-06-10 03:25:18 UTC
+2. Boost include directory is set from bsd.cmake for BSDs.
+
+--- cmake/CMakeLists.txt.orig   2019-08-18 00:42:17.620253273 +0000
 +++ cmake/CMakeLists.txt
-@@ -25,7 +25,7 @@ else()
+@@ -20,12 +20,22 @@ if(TARGET)
+         message("CMake files for ${TARGET} not found, using ${DCMAKE}")
+         include(${DCMAKE})
+     endif()
++    if(${TARGET} STREQUAL "bsd")
++        if(NOT DEFINED BSD_PREFIX_PATH)
++            message(FATAL_ERROR "Warning: BSD_PREFIX_PATH Variable Not Defined!")
++        else()
++            message("Setting ${BSD_PREFIX_PATH} as the prefix path.")
++        endif()
++    endif()
+ else()
+     message("TARGET not passed, using ${DCMAKE}")
      include(${DCMAKE})
  endif(TARGET)
- 
+
 -set(BOOST_INCLUDEDIR ${lib_base}/boost_1_54_0)
-+set(BOOST_INCLUDEDIR ${lib_base})
++if(NOT(${TARGET} STREQUAL "bsd"))
++    set(BOOST_INCLUDEDIR ${lib_base}/boost_1_54_0)
++endif()
++
  find_package(Boost REQUIRED)
- 
+
  # Include
+
