@@ -1,8 +1,7 @@
 # $FreeBSD: head/emulators/cannonball/Makefile 506026 2019-07-06 18:55:17Z swills $
 
 PORTNAME=	cannonball
-DISTVERSION=	g20171201
-PORTREVISION=	1
+DISTVERSION=	g20190819
 CATEGORIES=	emulators games
 
 MAINTAINER=	santhosh.raju@gmail.com
@@ -24,12 +23,12 @@ CMAKE_ARGS+=	-DBSD_PREFIX_PATH=${LOCALBASE}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	djyt
-GH_TAGNAME=	0c0814d
+GH_TAGNAME=	48d2c62
 
 BUILD_WRKSRC=		${WRKSRC}/cmake
 CONFIGURE_WRKSRC=	${WRKSRC}/cmake
 
-SUB_FILES=	${PORTNAME}.sh ${PORTNAME}.6
+SUB_FILES=	${PORTNAME}.sh
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/res
@@ -37,7 +36,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cmake/res/tilemap.bin ${STAGEDIR}${DATADIR}/res/tilemap.bin
 	${INSTALL_DATA} ${WRKSRC}/cmake/res/tilepatch.bin ${STAGEDIR}${DATADIR}/res/tilepatch.bin
 	${INSTALL_DATA} ${WRKSRC}/cmake/config.xml ${STAGEDIR}${DATADIR}/conf/config.xml
-	${INSTALL_MAN} ${WRKDIR}/cannonball.6 ${STAGEDIR}${MAN1PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/docs/cannonball.6 ${STAGEDIR}${MAN1PREFIX}/man/man6
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/cmake/cannonball ${STAGEDIR}${PREFIX}/libexec
 
