@@ -1,10 +1,10 @@
-# $FreeBSD: head/emulators/cannonball/Makefile 506026 2019-07-06 18:55:17Z swills $
+# $FreeBSD: head/emulators/cannonball/Makefile 510915 2019-09-03 02:49:46Z fox $
 
 PORTNAME=	cannonball
 DISTVERSION=	g20190819
 CATEGORIES=	emulators games
 
-MAINTAINER=	santhosh.raju@gmail.com
+MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Enhanced OutRun Engine
 
 LICENSE=	MAME-LICENSE
@@ -17,9 +17,9 @@ LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs
 USES=		cmake:insource pkgconfig sdl
 USE_SDL=	sdl
 
-CMAKE_ARGS+=	${WRKSRC}/cmake
-CMAKE_ARGS+=	-DTARGET=bsd
-CMAKE_ARGS+=	-DBSD_PREFIX_PATH=${LOCALBASE}
+CMAKE_ARGS+=	${WRKSRC}/cmake \
+		-DBSD_PREFIX_PATH=${LOCALBASE} \
+		-DTARGET=bsd
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	djyt
