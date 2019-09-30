@@ -1,11 +1,9 @@
 cannonball-port
 ===============
 
-FreeBSD ports script for script for Cannonball: An Enhanced OutRun Engine.
+FreeBSD [ports][3] script for script for Cannonball: An Enhanced OutRun Engine.
 
 You can find Cannonball [here][1]
-
-NOTE: This package is not yet available in the port tree.
 
 Installation
 ------------
@@ -39,3 +37,4 @@ BSD 2-clause. See LICENSE.
 
 [1]: https://github.com/djyt/cannonball/wiki
 [2]: https://github.com/djyt/cannonball
+[3]: https://www.freshports.org/emulators/cannonball
