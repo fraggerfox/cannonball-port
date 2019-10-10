@@ -1,7 +1,7 @@
 cannonball-port
 ===============
 
-FreeBSD [ports][3] script for script for Cannonball: An Enhanced OutRun Engine.
+FreeBSD [ports][3] script for Cannonball: An Enhanced OutRun Engine.
 
 You can find Cannonball [here][1]
 
