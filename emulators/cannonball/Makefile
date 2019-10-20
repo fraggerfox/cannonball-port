@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/cannonball/Makefile 510915 2019-09-03 02:49:46Z fox $
+# $FreeBSD: head/emulators/cannonball/Makefile 512877 2019-09-26 04:04:24Z fox $
 
 PORTNAME=	cannonball
 DISTVERSION=	g20190924
