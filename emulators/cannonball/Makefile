@@ -1,7 +1,8 @@
-# $FreeBSD: head/emulators/cannonball/Makefile 515324 2019-10-24 08:46:13Z fox $
+# $FreeBSD: head/emulators/cannonball/Makefile 519824 2019-12-11 17:53:48Z jbeich $
 
 PORTNAME=	cannonball
 DISTVERSION=	g20191023
+PORTREVISION=	1
 CATEGORIES=	emulators games
 
 MAINTAINER=	fox@FreeBSD.org
